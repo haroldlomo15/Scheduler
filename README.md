@@ -5,7 +5,7 @@ which serves as a db. The file can be found under `./pkg/db/appointments.json` .
 
 
 ### Setup
-- Using Goland or any ide that support go
+- Using Goland or any IDE that supports Go
 - Run the project by running the main.go file under `cmd/scheduler/main.go`
 
 Host url: http://localhost:7005/v1
@@ -18,12 +18,12 @@ Host url: http://localhost:7005/v1
 
 <br>
 
-##### Health
+#### Health
 Returns `ok` if service can accept requests
 
 <br>
 
-##### GetScheduled
+#### GetScheduled
 Returns all scheduled trainer's appointments
 
 `GET` /getscheduled?trainer_id={ trainer_id }
@@ -47,7 +47,7 @@ Sample Response
 ```
 <br>
 
-##### GetAppointments
+#### GetAppointments
 
 Returns a list of available appointment times for a trainer between two dates
 
@@ -77,7 +77,7 @@ Sample Request & Response
 ```
 <br>
 
-##### PostAppointment
+#### PostAppointment
 Post a schedule appointment
 
 `POST` /postappointment

@@ -132,7 +132,7 @@ func getAvailableResult(start, end time.Time, trainerAppointmentsMap map[int64]i
 	var result []string
 	availableTime := start
 
-	for !availableTime.After(end) {
+	for availableTime.Before(end) {
 		if _, ok := trainerAppointmentsMap[availableTime.Unix()]; ok {
 			// Trainer has an appointment so skip appointment date
 			availableTime = availableTime.Add(30 * time.Minute)
